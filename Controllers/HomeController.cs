@@ -24,12 +24,14 @@ public class HomeController : Controller
 
         //listando os clientes cadastrados
 
-          List<Cliente> listaClintes = new List<Cliente>();
-          listaClintes.Add(cliente1);
-          listaClintes.Add(cliente2);
-          listaClintes.Add(cliente3);
-          listaClintes.Add(cliente4);
-          listaClintes.Add(cliente5);
+          List<Cliente> listaClientes = new List<Cliente>();
+          listaClientes.Add(cliente1);
+          listaClientes.Add(cliente2);
+          listaClientes.Add(cliente3);
+          listaClientes.Add(cliente4);
+          listaClientes.Add(cliente5);
+
+          ViewBag.listaClientes = listaClientes;
 
 
        //Instanciando a classe fornecedor
@@ -46,6 +48,8 @@ public class HomeController : Controller
         listaFornecedores.Add(fornecedor3);
         listaFornecedores.Add(fornecedor4);
         listaFornecedores.Add(fornecedor5);
+
+        ViewBag.listaFornecedores =  listaFornecedores;
         return View();
     }
 
