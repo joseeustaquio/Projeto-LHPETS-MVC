@@ -2,22 +2,23 @@
     ViewData["Title"] = "Home Page";
 }
 
-< class="text-center">
-    <table class="table table-hover table-sm table=bordered table-sm caption-top">
-        <caption>Lista de Clientes</caption>
+<div class="container">
+    <h1>Sistema de controle interno - LH Pet</h1>
+    <table class="table table-hover table-sm table-bordered table-sm caption-top">
+        <caption>Lista de clientes</caption>
         <thead class="table-dark">
+
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Nome</th>
-                <th scope="col">CPF</th>
-                <th scope="col">E-mail</th>
+                <th scope="col">Cpf</th>
+                <th scope="col">Email</th>
                 <th scope="col">Paciente (pet)</th>
             </tr>
         </thead>
         <tbody>
-
-            @foreach (var item in @ViewBag.listaClientes)
-            {
+                @foreach (var item in @ViewBag.listaClientes)
+                {
                 <tr>
                     <th scope="row">@item.Id</th>
                     <td>@item.Nome</td>
@@ -25,28 +26,32 @@
                     <td>@item.Email</td>
                     <td>@item.Paciente</td>
                 </tr>
-            }
-        </tbody>
+                }
+        </tbody>     
     </table>
 
-    @foreach (var item in @ViewBag.listaFornecedores)
-    {
-        <table class="table table-hover table-sm table=bordered table-sm caption-top">
-            <caption>Lista de Clientes</caption>
-            <thead class="table-dark">
+    <table class="table table-hover table-sm table-bordered table-sm caption-top">
+        <caption>Lista de Fornecedores</caption>
+        <thead class="table-dark">
+
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Cnpj</th>
+                <th scope="col">Email</th>
+            </tr>
+           </thead>
+        <tbody>
+                @foreach (var item in @ViewBag.listaFornecedores)
+                {
                 <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">CNPJ</th>
-                    <th scope="col">E-mail</th>
+                    <th scope="row">@item.Id</th>
+                    <td>@item.Nome</td>
+                    <td>@item.Cnpj</td>
+                    <td>@item.Email</td>
                 </tr>
-            </thead>
-            <tbody>
-                <div>@item.Id</div>
-                <div>@item.Nome</div>
-                <div>@item.Cnpj</div>
-                <div>@item.Email</div>
-            </tbody>
-        </table>
-    }
-    </div>
+                }
+        </tbody>
+     
+    </table>
+</div>

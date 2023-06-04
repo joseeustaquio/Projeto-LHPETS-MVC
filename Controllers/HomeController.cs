@@ -18,9 +18,11 @@ public class HomeController : Controller
         //instanciando a classe cliente
         Cliente cliente1 = new Cliente(1,"José Maria","11111111111", "jm@teste.com","totó");
         Cliente cliente2 = new Cliente(2,"Maria José","22222222222","mj@gmail.com","bichano");
-        Cliente cliente3 = new Cliente(3,"João Paulo","jp@yahoo","33333333333", "Touche");
+        Cliente cliente3 = new Cliente(3,"João Paulo","333333332","jp@yahoo.com", "Touche");
         Cliente cliente4 = new Cliente(4,"Madalena Silva", "44444444444","ms@teste.com", "Pernalonga");
         Cliente cliente5 = new Cliente(5,"Poncio Pilatos","55555555555", "pp@teste.com", "piu piu");
+        Cliente cliente6= new Cliente(4,"Sandra Silva", "666666666","ss@teste.com", "Pernalonga");
+        Cliente cliente7 = new Cliente(5,"Marcos tibe","7777777777", "mt@teste.com", "piu piu");
 
         //listando os clientes cadastrados
 
@@ -30,6 +32,8 @@ public class HomeController : Controller
           listaClientes.Add(cliente3);
           listaClientes.Add(cliente4);
           listaClientes.Add(cliente5);
+          listaClientes.Add(cliente6);
+          listaClientes.Add(cliente7);
 
           ViewBag.listaClientes = listaClientes;
 
