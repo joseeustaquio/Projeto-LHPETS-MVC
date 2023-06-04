@@ -22,12 +22,30 @@ public class HomeController : Controller
         Cliente cliente4 = new Cliente(4,"Madalena Silva", "44444444444","ms@teste.com", "Pernalonga");
         Cliente cliente5 = new Cliente(5,"Poncio Pilatos","55555555555", "pp@teste.com", "piu piu");
 
+        //listando os clientes cadastrados
+
+          List<Cliente> listaClintes = new List<Cliente>();
+          listaClintes.Add(cliente1);
+          listaClintes.Add(cliente2);
+          listaClintes.Add(cliente3);
+          listaClintes.Add(cliente4);
+          listaClintes.Add(cliente5);
+
+
        //Instanciando a classe fornecedor
         Fornecedor fornecedor1 = new Fornecedor(1,"Pet.SA","11111110001.66", "jm@teste.com");
         Fornecedor fornecedor2 = new Fornecedor(2,"Mundo dog","222220001/77","mj@gmail.com");
         Fornecedor fornecedor3 = new Fornecedor(3,"Clinica Animal","333333/0001.88", "ca@teste.com");
         Fornecedor fornecedor4 = new Fornecedor(4,"Socor Bichos", "4444444/0001.99","sb@teste.com");
         Fornecedor fornecedor5 = new Fornecedor(5,"Veterinaria pet","55555/0001.11", "vp@teste.com");
+        
+        //Listando fornecedores cadastrados
+        List<Fornecedor> listaFornecedores = new List<Fornecedor>();
+        listaFornecedores.Add(fornecedor1);
+        listaFornecedores.Add(fornecedor2);
+        listaFornecedores.Add(fornecedor3);
+        listaFornecedores.Add(fornecedor4);
+        listaFornecedores.Add(fornecedor5);
         return View();
     }
 
